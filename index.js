@@ -22,8 +22,8 @@ function format_result(result) {
 		title: result.title,
 		artist: result.user.username,
 		thumbnail_url: result.artwork_url,
-		image_url: result.artwork_url.replace("large", "t300x300");
-	}
+		image_url: result.artwork_url.replace("large", "t300x300")
+	};
 }
 
 exports.init = function(_log, config) {
