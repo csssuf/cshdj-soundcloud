@@ -1,0 +1,20 @@
+{
+  "name": "cshdj-soundcloud",
+  "version": "0.1.0",
+  "description": "A Soundcloud plugin for CSH DJ.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csssuf/cshdj-soundcloud"
+  },
+  "dependencies": {
+    "q": "1.0.1",
+	"soundclouder" : "0.8.0"
+  },
+  "author": "James Forcier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csssuf/cshdj-soundcloud/issues"
+  },
+  "homepage": "https://github.com/csssuf/cshdj-soundcloud"
+}
