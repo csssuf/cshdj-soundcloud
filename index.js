@@ -12,6 +12,7 @@
 var Q = require("q");
 var soundcloud = require("soundclouder");
 var fs = require("fs");
+var request = require("request");
 
 var log;
 
@@ -69,16 +70,19 @@ exports.fetch = function(id, download_location) {
 	id = encodeURIComponent(id);
 	var download_path = download_location + id + ".mp3";
 	var ws = fs.createWriteStream(download_path);
+	var stream_location;
 
-	soundcloud.get('/tracks/' + id + '/stream', '', {}, function(error, data) {
+	soundcloud.get('/tracks/' + id, '', {}, function(error, data) {
 		if(error) {
 			deferred.reject(error);
 			return;
 		}
 
-		ws.write(data);
-		deferred.resolve(download_path);
+		stream_location = data.stream_url;
 	});
+
+	request({ "url" : stream_location, "followRedirect" : false}).pipe(ws);
+	deferred.resolve(download_path);
 
 	return deferred.promise;
 }
