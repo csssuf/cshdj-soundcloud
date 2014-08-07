@@ -11,6 +11,7 @@
 
 var Q = require("q");
 var soundcloud = require("soundclouder");
+var fs = require("fs");
 
 var log;
 
