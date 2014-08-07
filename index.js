@@ -81,7 +81,7 @@ exports.fetch = function(id, download_location) {
 		stream_location = data.stream_url;
 	});
 
-	request({ "url" : stream_location, "followRedirect" : false}).pipe(ws);
+	request({ uri : stream_location, followRedirect : false, method : "GET" }).pipe(ws);
 	deferred.resolve(download_path);
 
 	return deferred.promise;
