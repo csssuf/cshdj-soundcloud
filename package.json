@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "q": "1.0.1",
-	"soundclouder" : "0.8.0",
-	"request": "2.40.0"
+    "soundclouder" : "0.8.0",
+    "request": "2.40.0"
   },
   "author": "James Forcier",
   "license": "MIT",

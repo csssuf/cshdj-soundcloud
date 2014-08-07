@@ -59,6 +59,18 @@ exports.search = function(max_results, query) {
 			return;
 		}
 
+		function remove_unstreamable_tracks(tracks) {
+			var _tracks = [];
+			for(var i = 0; i < tracks.length; i++) {
+				if(tracks[i].streamable) {
+					_tracks.push(tracks[i]);
+				}
+			}
+			return _tracks;
+		}
+
+		data = remove_unstreamable_tracks(data);
+
 		deferred.resolve(data.map(format_result));
 	});
 
