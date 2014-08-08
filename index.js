@@ -16,7 +16,7 @@ var request = require("request");
 
 var log, _client_id;
 
-exports.display_name = "Soundcloud";
+exports.display_name = "SoundCloud";
 
 function format_result(result) {
 	return {

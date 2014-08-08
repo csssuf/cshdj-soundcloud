@@ -1,7 +1,7 @@
 {
   "name": "cshdj-soundcloud",
   "version": "0.1.0",
-  "description": "A Soundcloud plugin for CSH DJ.",
+  "description": "A SoundCloud plugin for CSH DJ.",
   "main": "index.js",
   "repository": {
     "type": "git",

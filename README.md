@@ -1,7 +1,7 @@
 cshdj-soundcloud
 ================
 
-Soundcloud plugin for CSH DJ.
+SoundCloud plugin for CSH DJ.
 
 Configuration
 =============
